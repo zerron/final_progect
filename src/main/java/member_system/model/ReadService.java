@@ -180,14 +180,14 @@ public class ReadService {
 			// 帳號
 			String memID = request.getParameter("memID").trim();
 			if(memID == null || memID.length() == 0) {
-				error.put("error_memID", ERRORMSG);
+				error.put("error_memID", "請輸入帳號");
 			} else {
 				member.setMemberId(memID);
 			}
 			// E-mail
 			String memEMAIL = request.getParameter("memEMAIL").trim();
 			if(memEMAIL == null || memEMAIL.length() == 0) {
-				error.put("error_memEMAIL", ERRORMSG);
+				error.put("error_memEMAIL", "請輸入Email");
 			} else if(!memEMAIL.matches(EMAIL_REGEX)){
 				error.put("error_memEMAIL", "E-mail格式不符合");
 			} else {

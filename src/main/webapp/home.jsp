@@ -19,10 +19,27 @@ Released   : 20130902
 <title></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="" rel="stylesheet" />
 <link href="<c:url value='/css/default.css' />" rel="stylesheet" type="text/css" media="all" />
 <link href="<c:url value='/css/fonts.css' />" rel="stylesheet" type="text/css" media="all" />
-
+<script src="<c:url value='/js/jquery.min.js' />"></script>
+<script>
+	$(document).ready(function(){
+		$(member).click(function(){
+			if('${Login}' == '') {
+				if($(beforeLogin).css('display') == 'none')
+					$(beforeLogin).css('display', '');
+				else
+					$(beforeLogin).css('display', 'none');
+			} else {
+				if($(afterLogin).css('display') == 'none')
+					$(afterLogin).css('display', '');
+				else
+					$(afterLogin).css('display', 'none');
+			}
+		});
+	});
+</script>
 </head>
 <body>
 <div id="header" class="container">
@@ -31,11 +48,24 @@ Released   : 20130902
 	</div>
 	<div id="menu">
 		<ul>
-			<li class="active"><a href="#" accesskey="1" title="">首頁</a></li>
+			<li class="active"><a href="" accesskey="1" title="">首頁</a></li>
 			<li><a href="<c:url value='/about_us.jsp' />" accesskey="3" title="">關於我們</a></li>
-			<li><a href="#" accesskey="4" title="">會員專區</a></li>
+			<li id="member"><span>會員專區</span></li>
 			<li><a href="mailto:greatmeeting@gmail.com" accesskey="5" title="">聯絡我們</a></li>
-		</ul>
+		</ul><br>
+		<div id="beforeLogin" style="display:none;">
+			<ul>
+				<li><a href="<c:url value='/member_system/sign_up.jsp' />">會員註冊</a></li>
+				<li><a href="<c:url value='/member_system/sign_in.jsp' />">會員登入</a></li>
+			</ul>
+		</div style="display:none;">
+		<div id="afterLogin" style="display:none;">
+			<ul>
+				<li><a href="<c:url value='/member_system/modify_info.jsp' />">修改會員資料</a></li>
+				<li><a href="<c:url value='/member_system/modify_password.jsp' />">修改會員密碼</a></li>
+				<li><a href="<c:url value='/member_system/LogoutServlet' />">會員登出</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 <div id="banner"></div>

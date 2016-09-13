@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 		if(!error.isEmpty()) {
 			// 登入失敗,顯示錯誤訊息
 			request.setAttribute("errorMsg", error);
-			RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("sign_in.jsp");
 			rd.forward(request, response);
 		} else {
 			// 登入成功,儲存登入狀態
@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
 			if(path != null) {
 				response.sendRedirect(path.toString());
 			} else {
-				response.sendRedirect("/final_project/index.jsp");
+				response.sendRedirect(request.getContextPath() + "/home.jsp");
 			}
 			
 			

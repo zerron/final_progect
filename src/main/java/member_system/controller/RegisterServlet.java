@@ -45,14 +45,14 @@ public class RegisterServlet extends HttpServlet {
 			// 輸入資料錯誤
 			request.setAttribute("member", member);
 			request.setAttribute("errorMsg", error);
-			RequestDispatcher rd = request.getRequestDispatcher("Register.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("sign_up.jsp");
 			rd.forward(request, response);
 		} else {
 			// 註冊成功
 			new MemberDAO().insert(member);
 			sendMail(member.getEmail());
 			request.setAttribute("member", member);
-			RequestDispatcher rd = request.getRequestDispatcher("RegisterSuccess.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("sign_up_success.jsp");
 			rd.forward(request, response);
 		}	
 	}

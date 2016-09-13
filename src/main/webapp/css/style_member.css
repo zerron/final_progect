@@ -1,0 +1,166 @@
+#page {
+	background-color:#f9f9f9;
+	color:#333;
+}
+#signInTable, #signUpTable, #resetTable, #modifyPWDTable {
+	width:340px;
+	margin: 0px auto;
+/*   	border: 1px solid #ddd;
+	border-radius: 4px;  */
+}
+#logo {
+	width:80px;
+	height:80px;
+	background-image: url(../images/art-clipboard.jpg);
+	background-position: center; 	
+	background-size: cover;
+	margin: 0px auto;
+	margin-top:20px;
+}
+#title {
+	text-align:center;
+}
+
+.inputTable {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding:20px;
+	margin:20px;
+	background-color:#fff;
+}
+.noError {
+	border: none;
+	padding:0px;
+	margin:0px;
+}
+#errorText {
+	color: #911;
+	background-color: #fcdede;
+	border-color: #d2b2b2;
+}
+.inputBox {
+	min-height: 34px;
+	width:100%;
+	margin-top:5px;
+	margin-bottom:5px;
+	padding:0px 5px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+}
+#fogot {
+	font-size: 12px;
+	color: #4078c0;
+	float:right;
+	text-decoration: none;
+}
+#subnitBottun {
+	width:100%;
+	margin-top:10px;
+	padding: 6px 12px;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+	background-image: linear-gradient(#8add6d, #60b044);
+	border: 1px solid #5ca941;
+	border-radius: 4px;
+	font-size: 14px;
+}
+#signUpBox {
+  	border: 1px solid #ddd;
+	border-radius:4px;
+	font-size:12px;
+	text-align:center;
+	padding:20px;
+	margin:20px;
+}
+#signUp {
+	color: #4078c0;
+	text-decoration: none;
+}
+
+#linkBar {
+	list-style: none;
+	text-align: center;
+}
+.bottomLink {
+	font-size: 13px;
+	color: #888;
+	text-decoration: none;
+}
+
+/*-----------------------------*/
+#direction {
+	font-size:12px;
+	margin-bottom:10px;
+	padding:10px;
+	text-align:justify;
+}
+/*-----------------------------*/
+.errorMsg {
+	float:right;
+	border: 1px solid #d2b2b2;
+	border-radius: 4px;
+	padding:1px 6px;
+	font-size:14px;
+	color: #911;
+	background-color: #fcdede;
+}
+/*-----------------------------*/
+#signUpForm {
+	width:500px;
+	margin: 0px auto;
+}
+.g-recaptcha {
+	width:310px;
+/*	border:solid 1px red;	*/
+    transform:scale(1);
+    transform-origin:0 0;
+}
+/*-----------------------------*/
+#ground {
+	background-color:rgba(96,176,68,0.5);
+}
+#message {
+/*	border:solid 1px red;	*/
+	border-radius:25px;
+	width:600px;
+	height:270px;
+	margin:150px auto;
+	background-color:#fff;
+	box-shadow:0px 0px 50px #555;
+}
+#biglogo {
+	width:230px;
+	height:230px;
+	margin:20px;
+	background-image: url(../images/art-clipboard.jpg);
+	background-position: center; 	
+	background-size: cover;
+	float:left;
+}
+#relativeBlock {
+/*	border:solid 1px red;	*/
+	width:328px;
+	height:270px;
+	float:left;
+	position:relative;
+}
+#successText {
+	position:absolute;
+	top:25%;
+	left:15%;
+	font-size:50px;
+}
+#returnButton {
+	position:absolute;
+	top:60%;
+	left:30%;
+	font-size:25px;
+	color: #666;
+	text-decoration: none;
+}
+
+
+
+
+

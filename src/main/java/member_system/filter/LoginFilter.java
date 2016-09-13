@@ -21,8 +21,8 @@ import javax.servlet.http.HttpSession;
 import member_system.model.MemberBean;
 
 @WebFilter(	urlPatterns = { "/*" }, 
-		   	initParams = { @WebInitParam(name = "url_1", value = "/member_system/ModifyInfo.jsp"),
-		   				   @WebInitParam(name = "url_2", value = "/member_system/ModifyPWD.jsp"),
+		   	initParams = { @WebInitParam(name = "url_1", value = "/member_system/modify_info.jsp"),
+		   				   @WebInitParam(name = "url_2", value = "/member_system/modify_password.jsp"),
 		   				   @WebInitParam(name = "url_3", value = "/member_system/Logout.jsp")}
 			)
 public class LoginFilter implements Filter {
@@ -49,7 +49,7 @@ public class LoginFilter implements Filter {
 					session.setAttribute("target", req.getContextPath() + req.getServletPath());
 					System.out.println("Login purview: need to login, not login yet. (" + req.getServletPath() + ")");
 					System.out.println("----------------------------------------------------------");
-					RequestDispatcher rd = req.getRequestDispatcher("/member_system/Login.jsp");
+					RequestDispatcher rd = req.getRequestDispatcher("/member_system/sign_in.jsp");
 					rd.forward(req, res);
 				}
 			} else {

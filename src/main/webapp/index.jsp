@@ -4,12 +4,12 @@
 <html>
 <body>
 	<h2>會員系統 測試</h2>
-	<a href="<c:url value='member_system/Register.jsp' />">註冊會員</a>
-	<a href="<c:url value='member_system/Login.jsp' />">會員登入</a>
+	<a href="<c:url value='member_system/sign_up.jsp' />">註冊會員</a>
+	<a href="<c:url value='member_system/sign_in.jsp' />">會員登入</a>
 	<a href="<c:url value='member_system/Logout.jsp' />">會員登出</a>
-	<a href="<c:url value='member_system/ModifyInfo.jsp' />">修改會員</a>
-	<a href="<c:url value='member_system/ModifyPWD.jsp' />">修改密碼</a>
-	<a href="<c:url value='member_system/ResetPassword.jsp' />">密碼重置</a>
+	<a href="<c:url value='member_system/modify_info.jsp' />">修改會員</a>
+	<a href="<c:url value='member_system/modify_password.jsp' />">修改密碼</a>
+	<a href="<c:url value='member_system/reset_password.jsp' />">密碼重置</a>
 </body>
 </html>
 

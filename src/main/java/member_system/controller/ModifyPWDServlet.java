@@ -29,14 +29,14 @@ public class ModifyPWDServlet extends HttpServlet {
 		if(!error.isEmpty()) {
 			// 輸入資料錯誤
 			request.setAttribute("errorMsg", error);
-			RequestDispatcher rd = request.getRequestDispatcher("ModifyPWD.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("modify_password.jsp");
 			rd.forward(request, response);
 		} else {
 			// 更換新密碼,寫入資料庫
 			member.setPassword(dataInput.getNewPassword());
 			new MemberDAO().updatePwd(member);
 			// 修改會員密碼成功
-			RequestDispatcher rd = request.getRequestDispatcher("ModifyPWDSuccess.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("modify_pwd_success.jsp");
 			rd.forward(request, response);
 		}	
 	}

@@ -91,7 +91,7 @@ public class CodingService {
 		return decryptedString;
 	}
 	
-	// 亂碼產生器(8位數)
+	// 亂碼產生器(16位數)
 	public static String garbledCode() {
 		String code = "";
 		int mod;

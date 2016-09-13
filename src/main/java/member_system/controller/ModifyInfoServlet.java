@@ -36,13 +36,14 @@ public class ModifyInfoServlet extends HttpServlet {
 			// 輸入資料錯誤
 			request.setAttribute("member", modifyMember);
 			request.setAttribute("errorMsg", error);
-			RequestDispatcher rd = request.getRequestDispatcher("ModifyInfo.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("modify_info.jsp");
 			rd.forward(request, response);
 		} else {
 			// 修改會員資料成功
 			new MemberDAO().updateInfor(modifyMember);
+			session.setAttribute("Login", modifyMember);
 			request.setAttribute("member", modifyMember);
-			RequestDispatcher rd = request.getRequestDispatcher("ModifyInfoSuccess.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("modify_info_success.jsp");
 			rd.forward(request, response);
 		}	
 	}

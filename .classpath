@@ -23,6 +23,5 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/_JSP/lib/javax.json-1.0.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

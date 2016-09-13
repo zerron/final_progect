@@ -42,13 +42,13 @@ public class ResetPasswordServlet extends HttpServlet {
 			// Email與會員資料紀錄不符
 			System.out.println(member.getEmail());
 			System.out.println(checkMember.getEmail());
-			error.put("error_memEMAIL", "帳號與電子郵件不相符");
+			error.put("error_memEMAIL", "帳號與Email不相符");
 		}
 		
 		if(!error.isEmpty()) {
 			// 輸入資料錯誤
 			request.setAttribute("errorMsg", error);
-			RequestDispatcher rd = request.getRequestDispatcher("ResetPassword.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("reset_password.jsp");
 			rd.forward(request, response);
 		} else {
 			// 
@@ -58,7 +58,7 @@ public class ResetPasswordServlet extends HttpServlet {
 			member.setPassword(CodingService.encryptString(code));
 			sendMail(member.getEmail(), code);
 			new MemberDAO().updatePwd(member);
-			RequestDispatcher rd = request.getRequestDispatcher("ResetPasswordSuccess.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("reset_success.jsp");
 			rd.forward(request, response);
 		}	
 	}
