@@ -2,24 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
-
-Name       : PlainLeaf 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20130902
-
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="" rel="stylesheet" />
 <link href="<c:url value='/css/default.css' />" rel="stylesheet" type="text/css" media="all" />
 <link href="<c:url value='/css/fonts.css' />" rel="stylesheet" type="text/css" media="all" />
 <script src="<c:url value='/js/jquery.min.js' />"></script>
@@ -41,6 +26,7 @@ Released   : 20130902
 	});
 </script>
 </head>
+<title>規秘</title>
 <body>
 <div id="header" class="container">
 	<div id="logo">
@@ -73,7 +59,7 @@ Released   : 20130902
 	<div class="boxA">
 		<h2>運動休閒</h2>
 		<div class="box">
-			<a href="D:\規秘web\sport\index.html" class="image image-full"><img src="<c:url value='/images/pic01.jpg' />" alt="" /></a>
+			<a href="" class="image image-full"><img src="<c:url value='/images/pic01.jpg' />" alt="" /></a>
 			<span>Sport</span>
 		</div>
 		<p>剛開始進入健身房，很多重訓設備都不會操作，就連最基本的啞鈴都不會舉，裡面的值班教練，好的對我敷衍了事，壞的用年齡的限制趕我走，大概小胖子到哪裡都惹人厭吧！最後我只好自己嘗試，然而由於姿勢不對，效果沒練到而且還受傷，真的是很氣餒。不過幸好有一位好心的先生（以下稱呼他為師傅，因為我們現在仍然一起練重訓）願意教我各種設備的使用方法及身體各部位的訓練方式，讓我開始進入正軌</p>
@@ -83,7 +69,7 @@ Released   : 20130902
 	<div class="boxB">
 		<h2>城市景點</h2>
 		<div class="box">
-			<a href="#" class="image image-full"><img src="<c:url value='/images/pic02.jpg' />" alt="" /></a>
+			<a href="" class="image image-full"><img src="<c:url value='/images/pic02.jpg' />" alt="" /></a>
 			<span>Attraction</span>
 		</div>
 		<p>在高樓林立的都市叢林裡　
@@ -109,7 +95,7 @@ Released   : 20130902
 	<div class="boxC">
 		<h2>街坊美食</h2>
 		<div class="box">
-			<a href="#" class="image image-full"><img src="<c:url value='/images/pic03.jpg' />" alt="" /></a>
+			<a href="<c:url value='/home.jsp'/>" class="image image-full"><img src="<c:url value='/images/pic03.jpg' />" alt="" /></a>
 			<span>Food</span>
 		</div>
 		<p>總的來講，餐廳的環境十分舒服，西式的裝橫風格，搭配柔和的燈光，營造出一個十分優雅的飲食氛圍。服務員的態度也十分友善，每當我需要幫助的時候總能及時為我解決問題，服務效率之高是很少見的。

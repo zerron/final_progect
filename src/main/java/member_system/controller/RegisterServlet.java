@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import member_system.model.CheckService;
+import member_system.model.CodingService;
 import member_system.model.DataBean;
 import member_system.model.JavaMailUtil;
 import member_system.model.MemberBean;
@@ -50,7 +51,7 @@ public class RegisterServlet extends HttpServlet {
 		} else {
 			// 註冊成功
 			new MemberDAO().insert(member);
-			sendMail(member.getEmail());
+			sendMail(member.getEmail(), member);
 			request.setAttribute("member", member);
 			RequestDispatcher rd = request.getRequestDispatcher("sign_up_success.jsp");
 			rd.forward(request, response);
@@ -60,14 +61,23 @@ public class RegisterServlet extends HttpServlet {
 	
 	
 	// EMAIL通知--------------驗證機制尚未建立
-	public void sendMail(String email) {
+	public void sendMail(String email, MemberBean member) {
 		String from = "jerr0987@yahoo.com.tw";
 		List<String> to = Arrays.asList(new String[] { email });
 		List<String> cc = Arrays.asList(new String[] {});
 		List<String> bcc = Arrays.asList(new String[] {});
-		String subject = "歡迎加入會員";
-		String text = "<h1>謝謝您加入會員</h1>" + "<h2>您可以按下列連結感受最新的體驗</h2>" + "<a href='http://localhost:8080/final_project/index.jsp'>首頁</a><br>"
-				+ "<br><br><font color='blue'> 再次感謝, </font><br>工作小組敬上";
+		String subject = "歡迎加入規秘會員";
+		String pwd = CodingService.decryptString(CodingService.KEY, member.getPassword());
+		String code = "";
+		for(int i = 0; i < pwd.length()-2; i++){
+			code += "*";
+		}
+		String text = "<h1>謝謝您加入規秘會員</h1>"
+					+ "<h4>會員帳號: " + member.getMemberId() + "</h4>"
+					+ "<h4>會員密碼: " + pwd.substring(0, 2) + code + "</h4>"
+					+ "<h2>您可以按下列連結感受最新的體驗</h2>" 
+					+ "<a href='http://192.168.11.4:8080/final_project/home.jsp'>首頁</a><br>"
+					+ "<br><br><font color='blue'> 再次感謝, </font><br>工作小組敬上";
 		JavaMailUtil util = new JavaMailUtil(from, to, cc, bcc, subject, text, null);
 		if (util.send()) {
 			System.out.println("發信成功");

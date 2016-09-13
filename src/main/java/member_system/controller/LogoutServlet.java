@@ -18,7 +18,6 @@ public class LogoutServlet extends HttpServlet {
 		session.invalidate();
 		System.out.println("Log out.");
 		response.sendRedirect(request.getContextPath() + "/home.jsp");
-		
 	}
 
 }
