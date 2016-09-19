@@ -1,8 +1,9 @@
 package member_system.model;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class MemberBean {
+public class MemberBean implements Serializable {
 	private String memberId;
 	private String password;
 	private String name;
