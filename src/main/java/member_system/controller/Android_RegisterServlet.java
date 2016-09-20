@@ -44,7 +44,8 @@ public class Android_RegisterServlet extends HttpServlet {
 			// insert會員註冊資料至Database
 			new MemberDAO().insert(register);
 			
-			jsonOut.addProperty("errorMsg", "會員註冊成功");
+			String success = null;
+			jsonOut.addProperty("errorMsg", success);
 		} else {
 			jsonOut.addProperty("errorMsg", "帳號重複");
 		}

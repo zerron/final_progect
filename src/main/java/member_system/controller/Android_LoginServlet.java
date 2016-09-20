@@ -35,7 +35,7 @@ public class Android_LoginServlet extends HttpServlet {
 		// 查詢Database內對應的會員資料
 		MemberBean resultMember = new MemberDAO().selectByMemberid(logIn.getMemberId());
 		// 檢查會員帳號密碼
-		String error = "有效帳號";
+		String error = null;
 		if(resultMember == null) {
 			error = "此為無效帳號";
 		} else if(!code.equals(resultMember.getPassword())) {
