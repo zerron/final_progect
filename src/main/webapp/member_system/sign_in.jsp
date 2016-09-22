@@ -14,7 +14,7 @@
 		}		
 	});
 </script>
-<title>Sign In</title>
+<title>Sign In - GUEMI</title>
 </head>
 <body id="page">
 	
@@ -23,7 +23,7 @@
 		</div>
 		<form Action="<c:url value='LoginServlet' />" method="POST">
 
-			<H1 id="title">Sign in to GuMi</H1>
+			<H1 id="title">Sign in to GUEMI</H1>
 			
 			<div id="errorText" class="inputTable">
 				<small><font>${errorMsg.error_memID}</font></small>

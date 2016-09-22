@@ -94,8 +94,8 @@
 	</footer>
 	<!-- Scripts -->
 	<script src="<c:url value='/js/jquery.min.js' />"></script>
-	<script src="<c:url value='/js/skel.min.js' />"></script>
-	<script src="<c:url value='/js/util.js' />"></script>
-	<script src="<c:url value='/js/main.js' />"></script>
+	<script src="<c:url value='/js/aboutus_skel.min.js' />"></script>
+	<script src="<c:url value='/js/aboutus_util.js' />"></script>
+	<script src="<c:url value='/js/aboutus_main.js' />"></script>
 </body>
 </html>

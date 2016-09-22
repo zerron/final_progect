@@ -25,7 +25,7 @@
 		}
 	});
 </script>
-<title>Modify Information</title>
+<title>Modify Information - GUEMI</title>
 </head>
 <body id="page">
 	

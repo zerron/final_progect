@@ -20,7 +20,7 @@
 		}
 	});
 </script>
-<title>Modify Password</title>
+<title>Modify Password - GUEMI</title>
 </head>
 <body id="page">
 	

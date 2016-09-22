@@ -11,7 +11,7 @@
 		location = "<c:url value='/home.jsp'/>";
 	}, 3000);
 </script>
-<title>Sign Up Success</title>
+<title>Sign Up Success - GUEMI</title>
 </head>
 <body id="ground">
 	<div id="message">

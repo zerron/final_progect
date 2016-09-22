@@ -26,7 +26,7 @@
 	});
 </script>
 </head>
-<title>規秘</title>
+<title>規秘 - GUEMI</title>
 <body>
 <div id="header" class="container">
 	<div id="logo">
@@ -59,7 +59,7 @@
 	<div class="boxA">
 		<h2>運動休閒</h2>
 		<div class="box">
-			<a href="" class="image image-full"><img src="<c:url value='/images/pic01.jpg' />" alt="" /></a>
+			<a href="<c:url value='/sport_system/sport_main.jsp' />" class="image image-full"><img src="<c:url value='/images/pic01.jpg' />" alt="" /></a>
 			<span>Sport</span>
 		</div>
 		<p>剛開始進入健身房，很多重訓設備都不會操作，就連最基本的啞鈴都不會舉，裡面的值班教練，好的對我敷衍了事，壞的用年齡的限制趕我走，大概小胖子到哪裡都惹人厭吧！最後我只好自己嘗試，然而由於姿勢不對，效果沒練到而且還受傷，真的是很氣餒。不過幸好有一位好心的先生（以下稱呼他為師傅，因為我們現在仍然一起練重訓）願意教我各種設備的使用方法及身體各部位的訓練方式，讓我開始進入正軌</p>

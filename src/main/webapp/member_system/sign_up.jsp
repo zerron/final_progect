@@ -33,7 +33,7 @@
 		}
 	});
 </script>
-<title>Sign Up</title>
+<title>Sign Up - GUEMI</title>
 </head>
 <body id="page">
 	
@@ -42,7 +42,7 @@
 		</div>
 		<form Action="<c:url value='RegisterServlet' />" method="POST">
 
-			<H1 id="title">Join GuMi</H1>
+			<H1 id="title">Join GUEMI</H1>
 
 			<div class="inputTable">
 			

@@ -11,7 +11,7 @@
 		location = "<c:url value='/home.jsp'/>";
 	}, 3000);
 </script>
-<title>Reset Password Success</title>
+<title>Reset Password Success - GUEMI</title>
 </head>
 <body id="ground">
 	<div id="message">

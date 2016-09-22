@@ -14,7 +14,7 @@
 		}		
 	});
 </script>
-<title>Reset Password</title>
+<title>Reset Password - GUEMI</title>
 </head>
 <body id="page">
 	
