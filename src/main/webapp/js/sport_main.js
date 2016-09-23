@@ -45,10 +45,10 @@
 			$header.each( function() {
 
 				var t 		= jQuery(this),
-					button 	= t.find('.button');
+					button 	= t.find('.keep');
 
 				button.click(function(e) {
-
+				
 					t.toggleClass('hide');
 
 					if ( t.hasClass('preview') ) {

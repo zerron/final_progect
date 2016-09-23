@@ -12,6 +12,8 @@
 </head>
 <body>
 
+	<!-- 判斷查詢字串 -->
+
 	<!-- Header -->
 	<header id="header">
 	<div class="inner">
@@ -20,10 +22,10 @@
 			<h2>
 				無論晴天雨天<br /> 尋找一個最適合你的地方
 			</h2>
-			<a href="#" class="button big alt"><span>出發</span></a>
-			
+			<a class="button big alt keep"><span>出發</span></a> 
+			<a href="<c:url value='/home.jsp' />" class="button big alt"><span>回首頁</span></a>
 		</div>
-		<a class="button hidden"><span></span></a>
+		<a class="button hidden keep"><span></span></a>
 	</div>
 	</header>
 
@@ -34,7 +36,7 @@
 
 				<!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
 				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic01.jpg"
+					<a href="sport_detail.jsp"><img src="images/pic01.jpg"
 						title="大安運動中心" alt="" /></a>
 				</div>
 				<div class="image fit">
@@ -113,12 +115,8 @@
 		class="info fa fa-info-circle"><span>About</span></a>
 	<div class="inner">
 		<div class="content">
-			<h3>Vestibulum hendrerit tortor id gravida</h3>
-			<p>In tempor porttitor nisl non elementum. Nulla ipsum ipsum,
-				feugiat vitae vehicula vitae, imperdiet sed risus. Fusce sed dictum
-				neque, id auctor felis. Praesent luctus sagittis viverra. Nulla erat
-				nibh, fermentum quis enim ac, ultrices euismod augue. Proin ligula
-				nibh, pretium at enim eget, tempor feugiat nulla.</p>
+			<h3>--------------------</h3>
+			<p>___________________________________________________________________</p>
 		</div>
 		<div class="copyright">
 			<h3>Follow me</h3>
@@ -131,8 +129,11 @@
 				<li><a href="#" class="icon fa-dribbble"><span
 						class="label">Dribbble</span></a></li>
 			</ul>
-			&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>.
-			Images: <a href="https://unsplash.com/">Unsplash</a>.
+			<p>
+				&copy; <a href="<c:url value='/about_us.jsp' />">規秘團隊</a> All rights
+				reserved. | 國立台北科技大學Java & Android程式設計人才養成班
+			</p>
+
 		</div>
 	</div>
 	</footer>
