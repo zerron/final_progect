@@ -2,6 +2,7 @@ package member_system.model;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -26,6 +27,7 @@ public class JavaMailUtil {
 
 	MimeMessage message;
 	String from;
+	String fromName;
 	String subject;
 	String text;
 	List<String> to;
@@ -37,11 +39,12 @@ public class JavaMailUtil {
 	 * 設定信件內文與附件
 	 */
 
-	public JavaMailUtil(String from, List<String> to, List<String> cc,
+	public JavaMailUtil(String from, String fromName, List<String> to, List<String> cc,
 			List<String> bcc, String subject,  String text, List<String> attachment
 			) {
 
 		this.from = from;
+		this.fromName = fromName;
 		if (to == null){
 			this.to = new ArrayList<>();
 		} else {
@@ -134,7 +137,11 @@ public class JavaMailUtil {
 	 */
 	public void setAddresses() throws AddressException, MessagingException {
 		// 寄件者
-		message.setFrom(new InternetAddress(from));
+		try {
+			message.setFrom(new InternetAddress(from, fromName));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		// 收件者
 		List<Address> listTO = new ArrayList<>();
 		for (String s : to) {
@@ -207,7 +214,5 @@ public class JavaMailUtil {
 	static {
 		userid = "jerr098765@gmail.com";//利用此帳號寄信
 		password = "j59601117";		
-//		userid = "ipolaung@gmail.com";//利用此帳號寄信
-//		password = "ipojava003";
 	}
 }

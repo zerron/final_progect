@@ -42,7 +42,7 @@
 		</form>
 	</div>
 	<div id="signUpTable">
-		<div id="signUpBox">成為『規秘』的新用戶? <a href="" id="signUp">註冊會員帳號</a></div>
+		<div id="signUpBox">成為『規秘』的新用戶? <a href="<c:url value='/member_system/sign_up.jsp'/>" id="signUp">註冊會員帳號</a></div>
 	</div>
 	<div id="linkBar">
 		<a href="<c:url value='/home.jsp'/>" class="bottomLink">Home</a>

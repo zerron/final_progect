@@ -65,14 +65,15 @@ public class ResetPasswordServlet extends HttpServlet {
 	
 	// EMAIL通知使用者重置後的隨機密碼
 	public void sendMail(String email, String code) {
-		String from = "jerr0987@yahoo.com.tw";
+		String from = "jerr098765@gmail.com";
+		String fromName = "GUEMI Member System";
 		List<String> to = Arrays.asList(new String[] { email });
 		List<String> cc = Arrays.asList(new String[] {});
 		List<String> bcc = Arrays.asList(new String[] {});
 		String subject = "會員密碼重置";
 		String text = "<h1>您的會員密碼已重置為 " + code + "</h1>" + "<h2>您可以按下列連結感受最新的體驗</h2>" + "<a href='http://192.168.11.4:8080/final_project/home .jsp'>首頁</a><br>"
 				+ "<br><br><font color='blue'> 再次感謝, </font><br>工作小組敬上";
-		JavaMailUtil util = new JavaMailUtil(from, to, cc, bcc, subject, text, null);
+		JavaMailUtil util = new JavaMailUtil(from, fromName, to, cc, bcc, subject, text, null);
 		if (util.send()) {
 			System.out.println("發信成功");
 		} else {
