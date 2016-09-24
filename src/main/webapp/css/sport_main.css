@@ -1462,6 +1462,12 @@
 					color: #FFF;
 					font-size: 1.75em;
 				}
+				
+				#footer .inner .copyright h4 {
+					color: #FFF;
+					font-size: 1.75em;
+					text-decoration: underline;
+				}
 
 				#footer .inner .content a,
 				#footer .inner .copyright a {

@@ -6,8 +6,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="<c:url value='/css/sport_main.css' />" rel="stylesheet"
-	type="text/css">
+<link href="<c:url value='/css/sport_main.css' />" rel="stylesheet" type="text/css">
+<script src="<c:url value='/js/jquery.min.js' />"></script>
+<script>
+	$(document).ready(function(){
+		var str = ${pageContext.request.queryString};
+		if(str != null) {
+			$('#header').attr('class', 'hide');
+		}		
+	});	
+</script>
 <title>Sport - GUEMI</title>
 </head>
 <body>
@@ -15,7 +23,8 @@
 	<!-- 判斷查詢字串 -->
 
 	<!-- Header -->
-	<header id="header">
+	<div id="5555555"></div>
+	<header id="header" >
 	<div class="inner">
 		<div class="content">
 			<h1>運動休閒</h1>
@@ -36,7 +45,7 @@
 
 				<!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
 				<div class="image fit">
-					<a href="sport_detail.jsp"><img src="images/pic01.jpg"
+					<a href="sport_detail.jsp"><img src="../images/banner.jpg"
 						title="大安運動中心" alt="" /></a>
 				</div>
 				<div class="image fit">
@@ -130,8 +139,7 @@
 						class="label">Dribbble</span></a></li>
 			</ul>
 			<p>
-				&copy; <a href="<c:url value='/about_us.jsp' />">規秘團隊</a> All rights
-				reserved. | 國立台北科技大學Java & Android程式設計人才養成班
+				&copy; <a href="<c:url value='/about_us.jsp' />">規秘團隊</a> All rights reserved. | 國立台北科技大學Java & Android程式設計人才養成班
 			</p>
 
 		</div>
@@ -139,7 +147,6 @@
 	</footer>
 
 	<!-- Scripts -->
-	<script src="<c:url value='/js/jquery.min.js' />"></script>
 	<script src="<c:url value='/js/sport_skel.min.js' />"></script>
 	<script src="<c:url value='/js/sport_util.js' />"></script>
 	<script src="<c:url value='/js/sport_main.js' />"></script>

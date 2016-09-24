@@ -57,16 +57,14 @@
 
 		</div>
 		<div class="copyright">
-			<h3>進入聊天室</h3>
-			<p>目前線上人數：</p>
-			<h4>加入我的行事曆</h4>
-			<!-- <ul class="icons">
+			<h4><a href="<c:url value='/chat_system/chatroom.jsp' />">進入聊天室</a></h4>
+			<ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						</ul> -->
-			<!-- &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. -->
+						</ul>
+			&copy; <a href="<c:url value='/about_us.jsp' />">規秘團隊</a> All rights reserved. | 國立台北科技大學Java & Android程式設計人才養成班
 		</div>
 	</div>
 	</footer>

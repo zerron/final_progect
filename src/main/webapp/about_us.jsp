@@ -13,7 +13,7 @@
 	<!-- Header -->
 	<header id="header">
 		<div class="inner">
-			<a href="<c:url value='/home.jsp' />" class="logo">關於我們</a>
+			<a class="logo">關於我們</a>
 			<nav id="nav">
 				<a href="<c:url value='/home.jsp' />">首頁</a>
 			</nav>
