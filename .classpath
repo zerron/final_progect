@@ -23,5 +23,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="websocket-api.jar"/>
+	<classpathentry kind="lib" path="json-lib-2.4-jdk15.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
