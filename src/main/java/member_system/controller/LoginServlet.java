@@ -55,6 +55,7 @@ public class LoginServlet extends HttpServlet {
 			
 			// 轉頁到原來保留的上一頁
 			Object path = session.getAttribute("target");
+			session.removeAttribute("target");
 			if(path != null) {
 				response.sendRedirect(path.toString());
 			} else {

@@ -23,7 +23,8 @@ import member_system.model.MemberBean;
 @WebFilter(	urlPatterns = { "/*" }, 
 		   	initParams = { @WebInitParam(name = "url_1", value = "/member_system/modify_info.jsp"),
 		   				   @WebInitParam(name = "url_2", value = "/member_system/modify_password.jsp"),
-		   				   @WebInitParam(name = "url_3", value = "/member_system/Logout.jsp")}
+		   				   @WebInitParam(name = "url_3", value = "/member_system/Logout.jsp"),
+		   				   @WebInitParam(name = "url_4", value = "/chat_system/chatroom.jsp")}
 			)
 public class LoginFilter implements Filter {
 	Collection<String> url = new ArrayList<String>();

@@ -21,7 +21,7 @@
 	<div id="signInTable">
 		<div id="logo">
 		</div>
-		<form Action="<c:url value='LoginServlet' />" method="POST">
+		<form Action="<c:url value='/member_system/LoginServlet' />" method="POST">
 
 			<H1 id="title">Sign in to GUEMI</H1>
 			

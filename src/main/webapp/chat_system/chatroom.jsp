@@ -16,15 +16,27 @@
 		socket.onclose = function(event) {
 			alert(event.code);
 		};
-
-		$('#send').on('click', function() {
-			var msg = $('#message').val();
-			var name = $('#name').val();
-			socket.send(JSON.stringify({
-				content : msg,
-				nickname : name
-			}));
+		
+		$(document).keydown(function(e){
+			if(e.which == 13 || e.keyCode == 13){
+				sendMessage();
+			}
 		});
+
+		$('#send').on('click', function(){
+			sendMessage();
+		});
+		
+		function sendMessage() {
+			var msg = $('#message').val();
+			var name = "${Login.name}";
+			if(msg != "") {
+				socket.send(JSON.stringify({
+					content : msg,
+					nickname : name
+				}));
+			}
+		}
 
 		function addMessage(message) {
 			message = JSON.parse(message);
@@ -51,19 +63,16 @@
 	</div>
 
 	
-	<form>
-		<div id="message_input">
-			<div>
-				<input id="name" name="name" type="text" placeholder="name" />
-			</div>
-			<div>
-				<input id="message" name="message" type="text" placeholder="message" />
-			</div>
-			<div id="send_button">
-				<input id="send" type="button" value="send" />
-			</div>
+	
+	<div id="message_input">
+		<div style="display:inline;">
+			<input id="message" name="message" type="text" style="width:300px;"/>
 		</div>
-	</form>
+		<div id="send_button" style="display:inline;">
+			<input id="send" type="button" value="send" />
+		</div>
+	</div>
+	
 
 
 
