@@ -7,6 +7,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="<c:url value='/css/sport_main.css' />" rel="stylesheet" type="text/css">
+<script src="<c:url value='/js/jquery.min.js' />"></script>
+<script>
+	$(document).ready(function(){
+		$('#like').on('click', function(){
+			var status = $('#like').attr('alt');
+			if(status == "white") {
+				$('#like').attr("src", "<c:url value='/images/redheart.png' />");
+				$('#like').attr("alt", "red");
+				// -----------------------------------後端Servlet
+			} else {
+				$('#like').attr("src", "<c:url value='/images/whiteheart.png' />");
+				$('#like').attr("alt", "white");
+				// -----------------------------------後端Servlet
+			}
+			
+		});
+	});	
+</script>
 <title>Sport Detail - GUEMI</title>
 </head>
 <body>
@@ -59,10 +77,13 @@
 		<div class="copyright">
 			<h4><a href="<c:url value='/chat_system/chatroom.jsp' />">進入聊天室</a></h4>
 			<ul class="icons">
+			<!-- 
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+			 -->				
+							<li><img id="like" alt="white" src="<c:url value='/images/whiteheart.png' />" style="width:35px; height:35px;" /></li>
 						</ul>
 			&copy; <a href="<c:url value='/about_us.jsp' />">規秘團隊</a> All rights reserved. | 國立台北科技大學Java & Android程式設計人才養成班
 		</div>
@@ -70,7 +91,6 @@
 	</footer>
 
 	<!-- Scripts -->
-	<script src="<c:url value='/js/jquery.min.js' />"></script>
 	<script src="<c:url value='/js/sport_skel.min.js' />"></script>
 	<script src="<c:url value='/js/sport_util.js' />"></script>
 	<script src="<c:url value='/js/sport_main.js' />"></script>
