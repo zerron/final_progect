@@ -1,0 +1,68 @@
+@font-face {
+	font-family: Senty;
+  	src: url(../fonts/SentyPea.ttf);
+}
+
+body {
+	margin: 0px auto;
+	background-color: rgba(36,196,84,0.3);
+	width: 90%;
+    height: 90%;
+    font: 16px verdana, Times New Roman, arial, helvetica, sans-serif, Microsoft JhengHei;
+}
+
+#chatroom {
+	margin-top:50px;
+}
+#title {
+	margin-left: 30px;
+	padding: 10px 30px;
+	padding-bottom: 20px;
+    border-radius: 5px;
+    background: rgba(36,196,84,1);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Senty;
+	color: #eee;
+}
+#messagesArea {
+	border: 2px solid rgba(36,196,84,1);
+    border-radius: 5px;
+    width: 100%;
+    height: 400px;
+    margin-top: 15px;
+    padding: 5px 15px;
+    resize: none;
+    box-sizing: border-box;
+    overflow: auto;
+    font-size: 20px;
+    font-family: Senty;
+}
+
+#message {
+	width: 50%;
+	margin-top: 5px;
+	margin-left: 5px;
+	padding: 10px;
+    box-shadow: 0 0 5px #000000;
+    font-size: 20px;
+    font-family: Senty;
+}
+
+.button {
+	border: none;
+	margin-left: 10px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    width: 80px;
+    background: rgba(36,196,84,1);
+    box-shadow: 0 0 3px #000000;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Senty;
+    color: #eee;
+}
+
+.button:hover {
+	background: rgba(36,196,84,0.7);
+}

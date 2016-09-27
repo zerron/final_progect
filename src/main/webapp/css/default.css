@@ -19,7 +19,7 @@
 	{
 		margin: 0;
 		padding: 0;
-		color: #8dc63f;
+		color: rgb(36,196,84);
 	}
 	
 	p, ol, ul
@@ -40,12 +40,12 @@
 	
 	strong
 	{
-		color: #8dc63f;
+		color: rgb(36,196,84);
 	}
 	
 	a
 	{
-		color: #8dc63f;
+		color: rgb(36,196,84);
 	}
 	
 	a:hover
@@ -166,7 +166,7 @@
 		display: inline-block;
 		margin-top: 2em;
 		padding: 1em 2em 1em 2em;
-		background: #8dc63f;
+		background: rgb(36,196,84);
 		letter-spacing: 0.20em;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -247,7 +247,7 @@
 	#logo a
 	{
 		text-decoration: none;
-		color: #8dc63f;
+		color: rgb(36,196,84);
 	}
 
 /*********************************************************************************/
@@ -400,7 +400,7 @@
 /* 	#featured .fa
 	{
 		font-size: 14em;
-		color: #8dc63f;
+		color: rgb(36,196,84);
 	} */
 
 	#featured .align-right
@@ -422,7 +422,7 @@
 	{
 		margin: 0;
 		padding: 1em 1em;
-		background: #8dc63f;
+		background: rgb(36,196,84);
 		display: block;
 		line-height: 3em;
 		text-align: center;
