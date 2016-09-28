@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import member_system.model.CodingService;
@@ -44,6 +45,7 @@ public class Android_LoginServlet extends HttpServlet {
 		// 傳回檢查結果
 		JsonObject jsonOut = new JsonObject();
 		jsonOut.addProperty("errorMsg", error);
+		jsonOut.add("memberInfo", new Gson().toJsonTree(resultMember));
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println(jsonOut.toString());

@@ -15,11 +15,27 @@
 			if(status == "white") {
 				$('#like').attr("src", "<c:url value='/images/redheart.png' />");
 				$('#like').attr("alt", "red");
-				// -----------------------------------後端Servlet
+				// -----------ajax-------------------後端Servlet--------------------
+					// ----判斷Login狀態----
+					if("${Login.memberId}" != "") {
+						$.ajax({
+							url: "<c:url value='/sport_system/LikeServlet' />",
+// 							data: ,
+							type: "POST"
+						});
+					}
 			} else {
 				$('#like').attr("src", "<c:url value='/images/whiteheart.png' />");
 				$('#like').attr("alt", "white");
-				// -----------------------------------後端Servlet
+				// -----------ajax-------------------後端Servlet--------------------
+					// ----判斷Login狀態----
+				if("${Login.memberId}" != "") {
+						$.ajax({
+							url: "<c:url value='/sport_system/DislikeServlet' />",
+// 							data: ,
+							type: "POST"
+						});
+					}
 			}
 			
 		});
