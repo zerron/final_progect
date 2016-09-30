@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<jsp:useBean  id='sportDAO'  class='sport_system.model.SportHibernate'  scope='page' />
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -42,82 +45,14 @@
 	<div id="main">
 		<div class="inner">
 			<div class="columns">
+			
+			<c:forEach var='sport'  items='${sportDAO.allSports}' varStatus="vs">
+				<div class="image fit">
+					<a href="sport_detail.jsp">
+					<img src="${pageContext.request.contextPath}/sport_system/controller/GetImage?no=${sport.ID}"/></a>
+				</div>
+			</c:forEach>	 
 
-				<!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
-				<div class="image fit">
-					<a href="sport_detail.jsp"><img src="../images/banner.jpg"
-						title="大安運動中心" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic02.jpg"
-						title="極限運動訓練中心" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic03.jpg"
-						title="內湖運動公園" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic04.jpg"
-						title="台北小巨蛋" alt="" /></a>
-				</div>
-
-				<!-- Column 2 (vertical, horizontal, vertical, horizontal) -->
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic06.jpg"
-						title="松山運動中心潛水" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic05.jpg"
-						title="臺大體育館" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic08.jpg" title="瑜珈境"
-						alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic07.jpg" title="體育客"
-						alt="" /></a>
-				</div>
-
-				<!-- Column 3 (horizontal, vertical, horizontal, vertical) -->
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic09.jpg"
-						title="古亭河濱公園" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic12.jpg" title="蜂運動"
-						alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic11.jpg"
-						title="世界健身中心-公館店" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic10.jpg"
-						title="萬華運動中心" alt="" /></a>
-				</div>
-
-				<!-- Column 4 (vertical, horizontal, vertical, horizontal) -->
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic13.jpg"
-						title="中正運動中心" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic14.jpg"
-						title="大直橋迎風河濱公園" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic15.jpg"
-						title="內湖運動中心" alt="" /></a>
-				</div>
-				<div class="image fit">
-					<a href="detail1.html"><img src="images/pic16.jpg"
-						title="西盛環保河濱公園籃球場" alt="" /></a>
-				</div>
-
-			</div>
-		</div>
-	</div>
 
 	<!-- Footer -->
 	<footer id="footer"> <a href="#"

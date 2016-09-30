@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >  <!-- default-lazy="false" -->
+    <!-- 本檔案描述的類別(ch04.ex01.model.Member)與
+                       表格名稱(MemberExample)         -->
+    <!-- 所有欄位都需要在Member.java內準備Getter/Setter，缺一不可    -->
+	<class name="sport_system.model.SportBean" table="SPORT" >
+	    <!-- name: 類別內的性質(property)名稱，column: 表格內的欄位名稱  -->
+	    <!-- 表示當永續本類別的物件時，性質pk的值會儲存到表格的PK欄位內  -->
+		<id name="ID"  type="java.lang.Integer">
+		   <generator class="native" />
+		</id>
+		<!-- 省略length屬性時， 如果欄位型態為varchar，則預設值為255，如果欄位型態為int，則預設值為11 -->
+        <!-- 省略type屬性時，Hibernate會用Reflection來推算每個欄位的型態  -->
+		<!-- 表示當永續本類別的物件時，性質userId的值會儲存到表格的account欄位內  -->
+		<!-- 省略column屬性時，它的內含值與name屬性相同-->
+		<property name="SPORTNAME"  />
+		<property name="ADDRESS"  />
+		<property name="PHONE"  />
+		<property name="LAT"  />
+		<property name="LNG"   />
+		<property name="INDOOR" />
+		<property name="ITEAM" />
+		<property name="COST" />
+		<property name="SCORE" />
+		<property name="PICTURE" />
+		<property name="blobFileName" />
+		<property name="DETAIL" />
+		<property name="STARTDATE" />
+		
+	</class>
+</hibernate-mapping>

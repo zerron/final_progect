@@ -2,6 +2,10 @@
 	font-family: Senty;
   	src: url(../fonts/SentyPea.ttf);
 }
+@font-face {
+	font-family: cwTeXHei;
+  	src: url(../fonts/cwTeXHei-zhonly.ttf);
+}
 
 body {
 	margin: 0px auto;
@@ -36,7 +40,7 @@ body {
     box-sizing: border-box;
     overflow: auto;
     font-size: 20px;
-    font-family: Senty;
+    font-family: cwTeXHei;
 }
 
 #message {
@@ -46,7 +50,7 @@ body {
 	padding: 10px;
     box-shadow: 0 0 5px #000000;
     font-size: 20px;
-    font-family: Senty;
+    font-family: cwTeXHei;
 }
 
 .button {

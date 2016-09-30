@@ -75,9 +75,6 @@
 				<p>收費/免費：收費</p>
 			</div>
 		</div>
-		<a href="detail1.html" class="nav previous"><span
-			class="fa fa-chevron-left"></span></a> <a href="detail2.html"
-			class="nav next"><span class="fa fa-chevron-right"></span></a>
 	</div>
 
 	<!-- Footer -->

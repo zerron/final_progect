@@ -25,5 +25,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="websocket-api.jar"/>
 	<classpathentry kind="lib" path="json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
