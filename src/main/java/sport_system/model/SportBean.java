@@ -8,7 +8,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-// 本類別封裝單筆書籍資料
 public class SportBean implements Serializable {
 	private static final long serialVersionUID = 1L; ;
 	private int  ID;

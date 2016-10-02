@@ -39,12 +39,12 @@ public class LoginFilter implements Filter {
 			HttpServletResponse res = (HttpServletResponse) response;
 			HttpSession session = req.getSession();
 			String servletPath = req.getServletPath();
-			System.out.println("Servlet path: " + servletPath);
+//			System.out.println("Servlet path: " + servletPath);
 
 			if (mustLogin(servletPath)) {
 				if (checkLogin(req)) {
-					System.out.println("Login purview: need to login, already login.");
-					System.out.println("---------------------------------------------------------");
+//					System.out.println("Login purview: need to login, already login.");
+//					System.out.println("---------------------------------------------------------");
 					chain.doFilter(request, response);
 				} else {
 					session.setAttribute("target", req.getContextPath() + req.getServletPath());
@@ -54,8 +54,8 @@ public class LoginFilter implements Filter {
 					rd.forward(req, res);
 				}
 			} else {
-				System.out.println("Login purview: not need to login.");
-				System.out.println("----------------------------------------------------------");
+//				System.out.println("Login purview: not need to login.");
+//				System.out.println("----------------------------------------------------------");
 				chain.doFilter(request, response);
 			}
 		} else {

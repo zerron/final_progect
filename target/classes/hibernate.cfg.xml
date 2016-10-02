@@ -37,6 +37,7 @@
 	<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
 	<property name="connection_pool_size">1</property>
 	<mapping resource="sport_system/model/SportBean.hbm.xml"></mapping>
+	<mapping resource="sport_system/model/FavoriteBean.hbm.xml"></mapping>
 	<!-- 3. 宣告程式使用的Mapping檔 ，每個永續類別都需要定義一個Mapping檔	-->
 	</session-factory>		
 </hibernate-configuration>

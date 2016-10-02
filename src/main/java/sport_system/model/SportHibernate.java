@@ -11,33 +11,13 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 
-public class SportHibernate implements ISportDAO {
-	DataSource ds;
+public class SportHibernate implements SportDAO {
 	SessionFactory factory = null;
-	int sportId;
-
-	/* (non-Javadoc)
-	 * @see sport.ISportDAO#getSportId()
-	 */
-	@Override
-	public int getSportId() {
-		return sportId;
-	}
-
-	/* (non-Javadoc)
-	 * @see sport.ISportDAO#setSportId(int)
-	 */
-	@Override
-	public void setSportId(int sportId) {
-		this.sportId = sportId;
-	}
 
 	public SportHibernate() {
 		factory=HibernateUtil.getSessionFactory();
 	}
-	/* (non-Javadoc)
-	 * @see sport.ISportDAO#save(sport.SportBean)
-	 */
+	
 	@Override
 	public int save(SportBean pb){
 		int update = 0;
@@ -56,9 +36,7 @@ public class SportHibernate implements ISportDAO {
 		}
 		return update;
 	}
-	/* (non-Javadoc)
-	 * @see sport.ISportDAO#getSport(int)
-	 */
+	
 	@Override
 	public SportBean getSport(int pk){
 		SportBean sport=null;
@@ -77,9 +55,7 @@ public class SportHibernate implements ISportDAO {
 			}
 		return sport;
 	}
-	/* (non-Javadoc)
-	 * @see sport.ISportDAO#deleteSport(sport.SportBean)
-	 */
+	
 	@Override
 	public int deleteSport(SportBean pb){
 		int update = 0;
@@ -98,9 +74,7 @@ public class SportHibernate implements ISportDAO {
 		}
 		return update;
 	}
-	/* (non-Javadoc)
-	 * @see sport.ISportDAO#updateSport(sport.SportBean)
-	 */
+	
 	@Override
 	public int updateSport(SportBean pb){
 		int update = 0;
@@ -119,9 +93,7 @@ public class SportHibernate implements ISportDAO {
 		}
 		return update;
 	}
-	/* (non-Javadoc)
-	 * @see sport.ISportDAO#getAllSports()
-	 */
+	
 	@Override
 	public List<SportBean> getAllSports() throws SQLException {
 

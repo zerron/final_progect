@@ -3,11 +3,7 @@ package sport_system.model;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface ISportDAO {
-
-	int getSportId();
-
-	void setSportId(int sportId);
+public interface SportDAO {
 
 	int save(SportBean pb);
 

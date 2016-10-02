@@ -10,6 +10,12 @@
 <script src="<c:url value='/js/jquery.min.js' />"></script>
 <script>
 	$(document).ready(function(){
+		var favorite = ${favorite};
+		if(favorite == true) {
+					$('#like').attr("src", "<c:url value='/images/redheart.png' />");
+					$('#like').attr("alt", "red");
+ 		}
+		
 		$('#like').on('click', function(){
 			var status = $('#like').attr('alt');
 			if(status == "white") {
@@ -20,7 +26,7 @@
 					if("${Login.memberId}" != "") {
 						$.ajax({
 							url: "<c:url value='/sport_system/LikeServlet' />",
-// 							data: ,
+ 							data: {"memberId":"${Login.memberId}", "sportId":"${itemDetail.ID}"},
 							type: "POST"
 						});
 					}
@@ -32,7 +38,7 @@
 				if("${Login.memberId}" != "") {
 						$.ajax({
 							url: "<c:url value='/sport_system/DislikeServlet' />",
-// 							data: ,
+ 							data: {"memberId":"${Login.memberId}", "sportId":"${itemDetail.ID}"},
 							type: "POST"
 						});
 					}
@@ -56,23 +62,20 @@
 	<div id="preview">
 		<div class="inner">
 			<div class="image fit">
-				<img src="images/pic05.jpg" alt="" />
+				<img style="margin:0px auto; width:700px; height:450px;" src="${pageContext.request.contextPath}/sport_system/controller/GetImage?no=${itemDetail.ID}"/>
 			</div>
 			<div class="content">
 				<header>
-				<h2>國立臺灣大學綜合體育館 NTU Sports Center</h2>
+				<h2>${itemDetail.SPORTNAME}</h2>
 				</header>
-				<p>國立臺灣大學綜合體育館（NTU Sports
-					Center）為同時具備大型活動場地及運動中心之現代化多功能體育館，除了交通便利以及場館大小適中外，也同時提供了全校師生、企業團體及一般民眾最佳的教學、休閒、運動及大型活動場地。
-
-				</p>
 				<p>
-					地址：臺北市羅斯福路四段一號&nbsp<a
-						href="http://ntusportscenter.ntu.edu.tw/front/index.aspx">台大綜合體育館</a>
-				</p>
-				<p>本館開放時間 週一~週五 6:00 ~ 22:00 週六 9:00 ~ 22:00 週日 9:00 ~18:00</p>
-				<p>運動類型：籃球場、排球場、手球場、游泳池、重量訓練室、壁球室、桌球室、羽球場</p>
-				<p>收費/免費：收費</p>
+				${itemDetail.DETAIL}</p>
+				<p>
+				地址：${itemDetail.ADDRESS}<br>
+				電話：${itemDetail.PHONE}<br>
+				場地類型：${itemDetail.INDOOR}<br>
+				運動類型：${itemDetail.ITEAM}<br>
+				收費/免費：${itemDetail.COST}</p>
 			</div>
 		</div>
 	</div>
@@ -84,8 +87,9 @@
 		<div class="content">
 			<h3>會員使用心得分享</h3>
 			<p>我想分享</p>
+			<!-- 
 			<p>剛開始進入健身房，很多重訓設備都不會操作，就連最基本的啞鈴都不會舉，裡面的值班教練，好的對我敷衍了事，壞的用年齡的限制趕我走，大概小胖子到哪裡都惹人厭吧！最後我只好自己嘗試，然而由於姿勢不對，效果沒練到而且還受傷，真的是很氣餒。不過幸好有一位好心的先生（以下稱呼他為師傅，因為我們現在仍然一起練重訓）願意教我各種設備的使用方法及身體各部位的訓練方式，讓我開始進入正軌</p>
-
+			 -->
 		</div>
 		<div class="copyright">
 			<h4><a href="<c:url value='/chat_system/chatroom.jsp' />">進入聊天室</a></h4>
@@ -95,7 +99,7 @@
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-			 -->				
+			 -->			
 							<li><img id="like" alt="white" src="<c:url value='/images/whiteheart.png' />" style="width:35px; height:35px;" /></li>
 						</ul>
 			&copy; <a href="<c:url value='/about_us.jsp' />">規秘團隊</a> All rights reserved. | 國立台北科技大學Java & Android程式設計人才養成班
