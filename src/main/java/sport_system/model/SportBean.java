@@ -110,9 +110,7 @@ public class SportBean implements Serializable {
 	public void setSTARTDATE(Timestamp sTARTDATE) {
 		STARTDATE = sTARTDATE;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+	
 	public SportBean() {
 		super();
 	}
