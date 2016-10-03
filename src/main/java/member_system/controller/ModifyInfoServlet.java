@@ -31,6 +31,7 @@ public class ModifyInfoServlet extends HttpServlet {
 		
 		// 取得目前登入狀態中的會員帳號
 		modifyMember.setMemberId(((MemberBean)session.getAttribute("Login")).getMemberId());
+		modifyMember.setPassword(((MemberBean)session.getAttribute("Login")).getPassword());
 		
 		if(!error.isEmpty()) {
 			// 輸入資料錯誤
