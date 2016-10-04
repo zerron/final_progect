@@ -24,8 +24,7 @@ import sport_system.model.SportJDBC;
 public class GetImage extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		InputStream is = null;
 		OutputStream os = null;
 		try {

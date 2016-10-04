@@ -60,11 +60,26 @@
 				</div>
 				<div class="box person">
 					<div class="image round">
-						<img src="<c:url value='/images/team06.jpg' />" alt="Person 4" />
+						<img src="<c:url value='/images/team08.png' />" alt="Person 4" />
+					</div>
+					<h3>哲鋒</h3>
+					<p>資料庫設計</p>
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="<c:url value='/images/team06.jpg' />" alt="Person 5" />
 					</div>
 					<h3>書瑋</h3>
 					<p>App程式設計</p>
 				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="<c:url value='/images/team07.png' />" alt="Person 6" />
+					</div>
+					<h3>世華</h3>
+					<p>前端網頁設計</p>
+				</div>
+				
 			</div>
 		</div>
 	</section>
